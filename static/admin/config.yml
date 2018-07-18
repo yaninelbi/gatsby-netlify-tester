@@ -23,4 +23,4 @@ collections:
           - {label: Name, name: name, widget: string}
           - {label: Sold, name: sold, widget: number, valueType: int}
           - {label: Target, name: target, widget: number, valueType: int}
-          - {label: Category, name: category, widget: select, options: ["Trending, "High Profitability", "On Sale", "Missing Inventory"]}
+          - {label: Category, name: category, widget: select, options: ["Trending", "High Profitability", "On Sale", "Missing Inventory"]}
