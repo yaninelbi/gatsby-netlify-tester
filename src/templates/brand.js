@@ -20,17 +20,23 @@ export const BrandTemplate = ({
                         <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                             {title}
                         </h1>
-                        <p>{logo}</p>
+                        <p><img src={logo} alt={title} /></p>
+                        <ul>
+                        <li><a href="#trending">Trending</a></li>
+                        <li><a href="#onsale">On Sale</a></li>
+                        </ul>
                         <div>
                         {products && products.length ? (
                             <div style={{ marginTop: `4rem` }}>
                               <h4>Products</h4>
                               <div className="productlist">
                                 {products.map(product => (
-                                  <div>
+                                  <div data-category={product.category}>
                                     <div>{product.name}</div>
                                     <div><img src={product.photo} alt={product.name}/></div>
                                     <div>{product.category}</div>
+                                    <div><strong>Sold:</strong> {product.sold}</div>
+                                    <div><strong>Target:</strong> {product.target}</div>
                                   </div>
                                 ))}
                               </div>
@@ -83,6 +89,8 @@ export const pageQuery = graphql`
             photo
             name
             category
+            sold
+            target
         }
       }
     }
