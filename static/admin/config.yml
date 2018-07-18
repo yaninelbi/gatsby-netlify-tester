@@ -34,7 +34,7 @@ collections:
         fields:
           - {label: Photo, name: photo, widget: image }
           - {label: Name, name: name, widget: string}
-          - {label: Category, name: category, widget: string}
+          - {label: Category, name: category, widget: select, options: ["best", "trending", "sale", "missing"]}
 
   - name: "pages"
     label: "Pages"
