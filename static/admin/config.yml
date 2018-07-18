@@ -23,7 +23,9 @@ collections:
   - name: "categories"
     label: "Categories"
     folder: "src/pages/categories"
-    create: true
+    create: true,
+      editor:
+        preview: false
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
