@@ -29,7 +29,7 @@ export const BrandTemplate = ({
                                 {products.map(product => (
                                   <div>
                                     <div>{product.name}</div>
-                                    <div>{product.photo}</div>
+                                    <div><img src={product.photo} alt={product.name}/></div>
                                     <div>{product.category}</div>
                                   </div>
                                 ))}
