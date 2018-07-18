@@ -28,10 +28,13 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "brand"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Logo", name: "logo", widget: "image"}
-      - {label: "Product 1 Title", name: "product_1_title", widget: "string"}
-      - {label: "Product 2 Title", name: "product_2_title", widget: "string"}
-      - {label: "Product 3 Title", name: "product_3_title", widget: "string"}
-      - {label: "Product 4 Title", name: "product_4_title", widget: "string"}
+      - label: Products
+        name: products
+        widget: list
+        fields:
+          - {label: Photo, name: photo, widget: image }
+          - {label: Name, name: name, widget: string}
+          - {label: Category, name: category, widget: string}
 
   - name: "pages"
     label: "Pages"
