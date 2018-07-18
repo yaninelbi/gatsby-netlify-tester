@@ -18,7 +18,7 @@ export const BrandTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{logo}</p>
+            <p></p>
           </div>
         </div>
       </div>
