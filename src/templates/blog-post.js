@@ -10,6 +10,7 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   tags,
+  category,
   title,
   helmet,
 }) => {
@@ -38,6 +39,7 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
+            <p>{category}</p>
           </div>
         </div>
       </div>
@@ -63,6 +65,7 @@ const BlogPost = ({ data }) => {
       description={post.frontmatter.description}
       helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
       tags={post.frontmatter.tags}
+      category={post.frontmatter.category}
       title={post.frontmatter.title}
     />
   )
@@ -86,6 +89,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        category
       }
     }
   }
