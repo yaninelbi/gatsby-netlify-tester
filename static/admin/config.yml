@@ -18,18 +18,20 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Category", name: "category", widget: "relation", collection: "categories"}
 
-
-collections:
-  - name: "categories"
-    label: "Categories"
-    folder: "src/pages/categories"
+  - name: "brand"
+    label: "Brand"
+    folder: "src/pages/brands"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "category"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "brand"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Product 1 Title", name: "product_1_title", widget: "string"}
+      - {label: "Product 2 Title", name: "product_2_title", widget: "string"}
+      - {label: "Product 3 Title", name: "product_3_title", widget: "string"}
+      - {label: "Product 4 Title", name: "product_4_title", widget: "string"}
 
   - name: "pages"
     label: "Pages"
